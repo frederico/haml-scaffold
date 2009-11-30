@@ -47,7 +47,7 @@ Haml Scaffold is available on RubyForge as a gem:
 
 You can also install it as a Rails plugin if you wish:
 
-  ./script/plugin install git://github.com/norman/haml-scaffold.git
+  ./script/plugin install git://github.com/frederico/haml-scaffold.git
 
 == Dependencies
 
