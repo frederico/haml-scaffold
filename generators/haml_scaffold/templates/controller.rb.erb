@@ -25,7 +25,7 @@ class <%= controller_class_name %>Controller < ApplicationController
         format.html { redirect_to <%= file_name.pluralize %>_path }
         format.xml  { head :ok }
       else
-        flash[:error] = '<%= class_name %> não pôde ser apagado(a).'
+        flash[:error] = '<%= class_name %> n√£o p√¥de ser apagado(a).'
         format.html { redirect_to @<%= file_name %> }
         format.xml  { head :unprocessable_entity }
       end

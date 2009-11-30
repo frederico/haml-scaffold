@@ -1,8 +1,8 @@
 %h2 Editar <%= singular_name %>
 - form_for(@<%= singular_name %>, :builder => HamlFormBuilder) do |f|
   = render "form",:f => f
-  = f.submit 'Salvar alterações'
+  = f.submit 'Salvar altera√ß√µes'
 %ul
   %li= link_to 'ver', @<%= singular_name %>
   %li= link_to 'voltar', <%= plural_name %>_path
-  %li= link_to 'remover', @<%= singular_name %>, :confirm => 'Você têm certeza?', :method => :delete
+  %li= link_to 'remover', @<%= singular_name %>, :confirm => 'Voc√™ t√™m certeza?', :method => :delete
