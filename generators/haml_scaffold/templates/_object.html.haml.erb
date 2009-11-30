@@ -5,6 +5,6 @@
       %strong <%= attribute.column.human_name %>:
       =h <%= singular_name %>.<%= attribute.name %>
 <% end -%>
-    = link_to 'Show', <%= singular_name %>
-    = link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>)
-    = link_to 'Destroy', <%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
+    = link_to 'ver', <%= singular_name %>
+    = link_to 'editar', edit_<%= singular_name %>_path(<%= singular_name %>)
+    = link_to 'remover', <%= singular_name %>, :confirm => 'Voc tm certeza?', :method => :delete

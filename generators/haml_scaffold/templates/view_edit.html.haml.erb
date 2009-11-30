@@ -1,6 +1,8 @@
-%h2 Editing <%= singular_name %>
-= render :partial => "form", :locals => {:<%= singular_name %> => @<%= singular_name %>}
+%h2 Editar <%= singular_name %>
+- form_for(@<%= singular_name %>, :builder => HamlFormBuilder) do |f|
+  = render "form",:f => f
+  = f.submit 'Salvar alterações'
 %ul
-  %li= link_to 'Show', @<%= singular_name %>
-  %li= link_to 'Back', <%= plural_name %>_path
-  %li= link_to 'Destroy', @<%= singular_name %>, :confirm => 'Are you sure?', :method => :delete  
+  %li= link_to 'ver', @<%= singular_name %>
+  %li= link_to 'voltar', <%= plural_name %>_path
+  %li= link_to 'remover', @<%= singular_name %>, :confirm => 'Você têm certeza?', :method => :delete

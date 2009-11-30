@@ -1,4 +1,5 @@
-%h2 New <%= singular_name %>
-= render :partial => "form", :locals => {:<%= singular_name %> => @<%= singular_name %>}
-%ul
-  %li= link_to 'Back', <%= plural_name %>_path
+%h2 Novo(a) <%= singular_name %>
+- form_for(@<%= singular_name %>, :builder => HamlFormBuilder) do |f|
+  = render "form",:f => f
+  = f.submit 'Salvar'
+= link_to 'voltar', <%= plural_name %>_path
